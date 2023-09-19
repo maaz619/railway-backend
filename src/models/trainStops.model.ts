@@ -17,6 +17,10 @@ const stopsSchema = new Schema({
     departure: {
         type: String,
         required: true,
+    },
+    position: {
+        type: Number,
+
     }
 })
 

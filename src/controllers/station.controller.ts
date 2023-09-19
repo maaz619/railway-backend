@@ -40,7 +40,7 @@ const updateStation = async (
 ) => {
     try {
         const station = await Station.findByIdAndUpdate({ _id: req.params.id }, { ...req.body }, { new: true })
-        if (!station) return new AppError("no stations found", 404)
+        if (!station) return next(new AppError("no stations found", 404))
         return res.status(201).send(station)
     } catch (error) {
         next(new AppError(error, res.statusCode))

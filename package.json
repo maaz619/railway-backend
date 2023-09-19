@@ -4,7 +4,8 @@
   "description": "irctc seat booking and allocation algorithm",
   "main": "app.ts",
   "scripts": {
-    "dev": "nodemon server.ts",
+    "prod": "nodemon server.ts --prod",
+    "dev": "nodemon server.ts --dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Maaz Ahmed",

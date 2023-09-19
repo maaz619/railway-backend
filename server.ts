@@ -6,6 +6,7 @@ import http from "node:http"
 
 dotenv.config()
 
+
 const server = http.createServer(app)
 const PORT = process.env.PORT || 8000
 
@@ -20,5 +21,5 @@ const dbConnect = async () => {
 
 server.listen(PORT, () => {
     dbConnect()
-    console.log(`server started at ${PORT}`)
+    console.log(`${process.env.NODE_ENV} server started at ${PORT}`)
 })
